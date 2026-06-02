@@ -27,6 +27,6 @@ latest_posts:
 
 My name is Haochen Ding, and I am currently a senior studying Computer Engineering in University of Illinois, Urbana-Champaign. I am generally interested in machine learning systems. I am currently doing research in data attribution and multi-agent systems. 
 
-I am also interested in making terminal software. Some of my recent projects: [ntkpr](https://github.com/haochend413/ntkpr.git), [muninx](https://github.com/haochend413/ntkpr.git). I enjoy building terminal note taking tools that help me better capture my thoughts. 
+I am also interested in making terminal software. Some of my recent projects: [ntkpr](https://github.com/haochend413/ntkpr.git), [muninx](https://github.com/haochend413/muninx.git). I enjoy building terminal note taking tools that help me better capture my thoughts. 
 
 In my free time, I love go biking and hiking outdoors. 
