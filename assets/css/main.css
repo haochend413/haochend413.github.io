@@ -352,23 +352,25 @@ main {
 
 /* Compact key/value rows */
 
+/* Two columns: the label column sizes itself to the longest label, so the
+   descriptions stay aligned no matter how long a label gets. */
 .rows {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 2.5rem;
+  row-gap: 0.45rem;
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.rows li {
-  display: flex;
-  gap: 1.25rem;
-  padding: 0.22rem 0;
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
+.rows li {
+  display: contents;
+}
+
 .rows .key {
-  flex: none;
-  width: 6.5rem;
   color: var(--fg);
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -540,7 +542,14 @@ pre code {
     padding: 0.9rem 0;
   }
 
+  /* Let the nav drop below the name rather than widening the page. */
+  .site-header .wrap {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+  }
+
   .nav {
+    flex-wrap: wrap;
     gap: 1rem;
     font-size: 0.78rem;
   }
@@ -554,13 +563,17 @@ pre code {
     gap: 0.2rem;
   }
 
-  .rows li {
-    flex-direction: column;
-    gap: 0.1rem;
+  /* Stack label over description on narrow screens. */
+  .rows {
+    grid-template-columns: 1fr;
+    row-gap: 0.1rem;
   }
 
   .rows .key {
-    width: auto;
+    padding-top: 0.6rem;
+  }
+
+  .rows li:first-child .key {
     padding-top: 0;
   }
 }
